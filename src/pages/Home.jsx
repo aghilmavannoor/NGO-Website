@@ -49,8 +49,8 @@ const Home = () => {
         {/* Environmental Canopy Background Image with Dark Soft Gradients */}
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=1920&q=80" 
-            alt="Dense green woodland canopy" 
+            src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1920&q=80" 
+            alt="Forest Canopy background" 
             className="w-full h-full object-cover opacity-35"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/70 to-transparent"></div>
