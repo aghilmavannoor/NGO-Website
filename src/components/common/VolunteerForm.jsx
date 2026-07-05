@@ -8,11 +8,9 @@ const VolunteerForm = () => {
     name: '',
     email: '',
     phone: '',
-    address: '',
     skills: '',
     interests: [],
-    availability: 'weekends',
-    resumeName: ''
+    availability: 'weekends'
   });
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -40,7 +38,6 @@ const VolunteerForm = () => {
     } else if (!/^\d{10,12}$/.test(formData.phone.replace(/[\s-+]/g, ''))) {
       tempErrors.phone = 'Invalid phone number';
     }
-    if (!formData.address.trim()) tempErrors.address = 'Address is required';
     if (formData.interests.length === 0) tempErrors.interests = 'Select at least one area of interest';
     
     setErrors(tempErrors);
@@ -69,13 +66,6 @@ const VolunteerForm = () => {
     });
   };
 
-  const handleFileChange = (e) => {
-    const file = e.target.files[0];
-    if (file) {
-      setFormData((prev) => ({ ...prev, resumeName: file.name }));
-    }
-  };
-
   const handleSubmit = (e) => {
     e.preventDefault();
     if (validate()) {
@@ -89,11 +79,9 @@ const VolunteerForm = () => {
           name: '',
           email: '',
           phone: '',
-          address: '',
           skills: '',
           interests: [],
-          availability: 'weekends',
-          resumeName: ''
+          availability: 'weekends'
         });
       }, 1500);
     }
@@ -183,23 +171,6 @@ const VolunteerForm = () => {
               </div>
             </div>
 
-            {/* Address */}
-            <div>
-              <label htmlFor="volunteer-addr" className="block text-[10px] font-black text-slate-400 mb-2 uppercase tracking-wider">Resident Address</label>
-              <input
-                type="text"
-                id="volunteer-addr"
-                name="address"
-                value={formData.address}
-                onChange={handleChange}
-                className={`w-full px-4 py-3 text-sm border rounded-2xl bg-slate-50/50 focus:outline-none focus:bg-white focus:ring-2 focus:ring-emerald-500/10 ${
-                  errors.address ? 'border-red-400 focus:border-red-500' : 'border-slate-200 focus:border-primary'
-                }`}
-                placeholder="Complete postal address..."
-              />
-              {errors.address && <p className="text-red-500 text-xs mt-1 font-semibold">{errors.address}</p>}
-            </div>
-
             {/* Interests Checkbox grid */}
             <div>
               <label className="block text-[10px] font-black text-slate-400 mb-3 uppercase tracking-wider">Areas of Interest</label>
@@ -239,26 +210,6 @@ const VolunteerForm = () => {
                 className="w-full px-4 py-3 text-sm border border-slate-200 rounded-2xl bg-slate-50/50 focus:outline-none focus:bg-white focus:ring-2 focus:ring-emerald-500/10 font-medium"
                 placeholder="e.g. Photography, Teaching, Planting, Designing, First Aid..."
               />
-            </div>
-
-            {/* Resume Upload (Mock) */}
-            <div>
-              <label className="block text-[10px] font-black text-slate-400 mb-2 uppercase tracking-wider">Upload Resume / CV (Optional)</label>
-              <div className="flex items-center gap-4">
-                <label className="flex items-center gap-2 px-5 py-3 border border-slate-250 rounded-2xl text-xs font-bold text-slate-650 hover:bg-slate-50 hover:border-slate-350 cursor-pointer transition-all">
-                  <FileText size={16} className="text-slate-500" />
-                  <span>Choose PDF / DOCX</span>
-                  <input
-                    type="file"
-                    accept=".pdf,.docx,.doc"
-                    onChange={handleFileChange}
-                    className="hidden"
-                  />
-                </label>
-                <span className="text-xs text-slate-500 font-semibold italic truncate max-w-[200px]">
-                  {formData.resumeName || 'No file selected'}
-                </span>
-              </div>
             </div>
 
             <Button
