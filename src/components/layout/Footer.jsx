@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Leaf, Mail, Phone, MapPin, Send, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
 import Button from '../common/Button';
+import logoDhi from '../../assets/logo-dhi.png';
+import logoKaanaga from '../../assets/logo-kaanaga.png';
 
 const Footer = () => {
   const [email, setEmail] = useState('');
@@ -27,12 +29,12 @@ const Footer = () => {
           <Link to="/" className="flex items-center gap-3 select-none">
             <div className="flex gap-2">
               <img 
-                src="/logo-dhi.png" 
+                src={logoDhi} 
                 alt="DHI Green Foundation Logo" 
                 className="w-10 h-10 object-contain rounded-lg border border-emerald-950 bg-white p-0.5"
               />
               <img 
-                src="/logo-kaanaga.png" 
+                src={logoKaanaga} 
                 alt="Kaanaga Kovai Logo" 
                 className="w-10 h-10 object-contain rounded-lg border border-emerald-950 bg-white p-0.5"
               />

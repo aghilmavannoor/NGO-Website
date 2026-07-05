@@ -4,6 +4,8 @@ import { Shield, Sparkles, Award, Globe, Github, Linkedin, Twitter } from 'lucid
 import SectionTitle from '../components/common/SectionTitle';
 import Timeline from '../components/common/Timeline';
 import Testimonials from '../components/common/Testimonials';
+import logoDhi from '../assets/logo-dhi.png';
+import logoKaanaga from '../assets/logo-kaanaga.png';
 
 const teamMembers = [
   {
@@ -46,12 +48,12 @@ const About = () => {
         <div className="max-w-7xl mx-auto px-4 md:px-8 text-center flex flex-col items-center relative z-10">
           <div className="flex gap-4 justify-center items-center mb-6">
             <img 
-              src="/logo-dhi.png" 
+              src={logoDhi} 
               alt="DHI Green Foundation Logo" 
               className="w-16 h-16 object-contain rounded-2xl border border-white/10 bg-white p-1 shadow-md hover:scale-105 transition-transform"
             />
             <img 
-              src="/logo-kaanaga.png" 
+              src={logoKaanaga} 
               alt="Kaanaga Kovai Logo" 
               className="w-16 h-16 object-contain rounded-2xl border border-white/10 bg-white p-1 shadow-md hover:scale-105 transition-transform"
             />

@@ -3,6 +3,8 @@ import { NavLink, Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Leaf } from 'lucide-react';
 import Button from '../common/Button';
+import logoDhi from '../../assets/logo-dhi.png';
+import logoKaanaga from '../../assets/logo-kaanaga.png';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -59,7 +61,7 @@ const Navbar = () => {
         {/* Branding Logo */}
         <Link to="/" className="flex items-center gap-3 select-none group">
           <img 
-            src="/logo-dhi.png" 
+            src={logoDhi} 
             alt="DHI Green Foundation Logo" 
             className="w-12 h-12 object-contain rounded-lg border border-emerald-150 bg-white p-0.5 group-hover:scale-105 transition-transform shadow-sm"
           />
@@ -89,7 +91,7 @@ const Navbar = () => {
           
           <div className="flex items-center gap-2 border-l border-slate-200 pl-4 h-10">
             <img 
-              src="/logo-kaanaga.png" 
+              src={logoKaanaga} 
               alt="Kaanaga Kovai Logo" 
               className="w-10 h-10 object-contain rounded-lg border border-emerald-100 bg-white p-0.5 shadow-sm"
             />
@@ -138,7 +140,7 @@ const Navbar = () => {
                 {/* Secondary Logo in Mobile Drawer */}
                 <div className="flex items-center justify-center gap-2 pt-2 border-t border-slate-100 mt-2">
                   <img 
-                    src="/logo-kaanaga.png" 
+                    src={logoKaanaga} 
                     alt="Kaanaga Kovai Logo" 
                     className="w-8 h-8 object-contain rounded-lg border border-emerald-100 bg-white p-0.5"
                   />

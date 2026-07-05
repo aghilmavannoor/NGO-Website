@@ -9,6 +9,7 @@ import ProgramCard from '../components/common/ProgramCard';
 import PartnerSlider from '../components/common/PartnerSlider';
 import projectService from '../services/projectService';
 import { programsData } from '../data/mockData';
+import logoKaanaga from '../assets/logo-kaanaga.png';
 
 const Home = () => {
   const [featuredProjects, setFeaturedProjects] = useState([]);
@@ -27,13 +28,13 @@ const Home = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.15,
+        staggerChildren: 0.1,
       },
     },
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
+    hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
       y: 0,
@@ -42,31 +43,30 @@ const Home = () => {
   };
 
   return (
-    <div className="overflow-x-hidden font-sans">
+    <div className="overflow-hidden font-sans">
       {/* 1. HERO SECTION (100vh Presentation Slide) */}
-      <section className="relative min-h-screen flex items-center justify-center bg-slate-950 text-white overflow-hidden py-24 px-4">
+      <section className="relative min-h-screen flex items-center justify-center bg-slate-950 text-white overflow-hidden pt-20 pb-16 px-4">
         {/* Environmental Canopy Background Image with Dark Soft Gradients */}
-        <div className="absolute inset-0 z-0 opacity-45">
+        <div className="absolute inset-0 z-0">
           <img 
-            src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1920&q=80" 
-            alt="Forest Canopy background" 
-            className="w-full h-full object-cover scale-105"
+            src="https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=1920&q=80" 
+            alt="Dense green woodland canopy" 
+            className="w-full h-full object-cover opacity-35"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/80 to-slate-900/40"></div>
-          <div className="absolute inset-0 bg-gradient-to-r from-emerald-950/30 via-transparent to-slate-950/40"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/70 to-transparent"></div>
+          
+          {/* Ambient Organic Light blobs */}
+          <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-emerald-500/10 rounded-full blur-3xl pointer-events-none -translate-x-1/2 -translate-y-1/2"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-[600px] h-[600px] bg-emerald-500/5 rounded-full blur-3xl pointer-events-none translate-x-1/2 translate-y-1/2"></div>
         </div>
 
-        {/* Ambient Organic Light blobs */}
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
-
         {/* Hero Content */}
-        <div className="max-w-6xl mx-auto text-center relative z-10 space-y-10">
+        <div className="max-w-7xl mx-auto text-center relative z-10 space-y-8 w-full px-4">
           <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
+            initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs md:text-sm font-bold uppercase tracking-wider font-display"
+            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 text-emerald-400 text-xs font-bold uppercase tracking-widest backdrop-blur-sm"
           >
             <Leaf size={16} className="fill-emerald-400/20 text-emerald-400" />
             <span>Preserving Ecosystems Since 2021</span>
@@ -101,7 +101,7 @@ const Home = () => {
             className="flex items-center justify-center gap-3 bg-white/5 border border-white/10 rounded-2xl p-4 max-w-md mx-auto backdrop-blur-sm"
           >
             <img 
-              src="/logo-kaanaga.png" 
+              src={logoKaanaga} 
               alt="Kaanaga Kovai Logo" 
               className="w-12 h-12 object-contain bg-white rounded-xl p-1 shadow-md"
             />
