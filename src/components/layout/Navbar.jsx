@@ -31,11 +31,9 @@ const Navbar = () => {
   const navLinks = [
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
-    { name: 'Mission & Vision', path: '/mission-vision' },
     { name: 'Projects', path: '/projects' },
-    { name: 'Programs', path: '/programs' },
-    { name: 'Gallery', path: '/gallery' },
     { name: 'Impact', path: '/impact' },
+    { name: 'Gallery', path: '/gallery' },
     { name: 'Blog', path: '/blog' },
     { name: 'Contact', path: '/contact' }
   ];

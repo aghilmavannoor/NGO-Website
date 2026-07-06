@@ -5,10 +5,8 @@ import { Link } from 'react-router-dom';
 import Button from '../components/common/Button';
 import SectionTitle from '../components/common/SectionTitle';
 import ProjectCard from '../components/common/ProjectCard';
-import ProgramCard from '../components/common/ProgramCard';
 import PartnerSlider from '../components/common/PartnerSlider';
 import projectService from '../services/projectService';
-import { programsData } from '../data/mockData';
 import logoDhi from '../assets/logo-dhi-official.png';
 
 const Home = () => {
@@ -254,40 +252,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* 4. ACTIVE PROGRAMS SECTION (100vh Presentation Slide) */}
-      <section className="relative min-h-screen flex items-center bg-gradient-to-b from-white via-emerald-50/10 to-slate-50 py-24 overflow-hidden border-t border-slate-100">
-        <div className="absolute bottom-10 left-10 w-[600px] h-[600px] bg-emerald-100/20 rounded-full blur-3xl pointer-events-none"></div>
 
-        <div className="max-w-7xl mx-auto px-4 md:px-8 w-full relative z-10">
-          <SectionTitle
-            title="Educational and community programs"
-            subtitle="Active Training"
-            align="center"
-          />
-
-          <motion.div 
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: '-5%' }}
-            variants={containerVariants}
-            className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-6xl mx-auto mt-12"
-          >
-            {programsData.slice(0, 2).map((program) => (
-              <motion.div key={program.id} variants={itemVariants}>
-                <ProgramCard program={program} />
-              </motion.div>
-            ))}
-          </motion.div>
-
-          <div className="text-center mt-16">
-            <Link to="/programs">
-              <Button variant="outline" size="lg" className="shadow-sm hover:scale-105 transition-transform duration-300">
-                Learn About All Programs
-              </Button>
-            </Link>
-          </div>
-        </div>
-      </section>
 
       {/* 5. TRUSTED PARTNERS BANNER */}
       <section className="py-16 bg-slate-900 border-t border-slate-800 relative overflow-hidden">
