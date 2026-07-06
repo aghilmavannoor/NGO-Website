@@ -81,7 +81,7 @@ const MissionVision = () => {
         <div className="max-w-4xl mx-auto text-center px-4 relative z-10 space-y-6">
           <span className="text-xs uppercase tracking-widest text-emerald-400 font-extrabold block font-display">Our Tagline</span>
           <blockquote className="font-display font-black text-4xl md:text-6xl leading-tight uppercase tracking-tight">
-            "Planting Seeds for a Green Future"
+            "Culture with Agriculture"
           </blockquote>
           <p className="text-slate-350 text-xs md:text-sm font-medium tracking-wide">
             Helping communities transition from environmental dependency to conservation leadership.

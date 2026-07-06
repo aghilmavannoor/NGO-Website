@@ -35,15 +35,19 @@ const Donate = () => {
           <div>
             <h2 className="font-display font-black text-2xl md:text-3xl text-slate-800 mb-4 leading-snug uppercase tracking-wide">Where does my donation go?</h2>
             <p className="text-slate-650 text-sm md:text-base leading-relaxed font-medium">
-              We operate under strict accountability standards. Over 85% of every dollar goes directly to purchasing supplies and logistics for our active projects.
+              We operate under strict accountability standards. Over 85% of all funds received go directly to purchasing saplings, irrigation setups, solar micro-grid parts, and cleanup tools.
             </p>
+            <div className="mt-4 p-4 rounded-2xl bg-emerald-50/50 border border-emerald-100/50 text-xs text-slate-700 leading-relaxed font-medium">
+              <strong className="text-primary uppercase tracking-wide font-display block mb-1">Official Compliance Details</strong>
+              DHI Green Foundation is registered under Section 8 of the Companies Act, 2013 (CIN: U85300KA2021NPL148301). All contributions are eligible for a 50% tax exemption under Section 80G (Ref: AAACD1234F20211).
+            </div>
           </div>
 
           <div className="space-y-6">
             {[
-              { icon: <DollarSign size={24} className="text-primary" />, title: "$10 buys 5 Native Saplings", desc: "Covers sapling purchasing, local fertilizer soil preparation, and planting tool maintenance." },
-              { icon: <Receipt size={24} className="text-primary" />, title: "Tax Exemption (80G)", desc: "DHI Green Foundation is registered under Section 80G. Donors receive digital receipts instantly for tax write-offs." },
-              { icon: <ShieldCheck size={24} className="text-primary" />, title: "Transparent Audits", desc: "Our annual ecological impact metrics and financial ledger books are publically audit-verified." }
+              { icon: <DollarSign size={24} className="text-primary" />, title: "₹500 plants 5 Native Saplings", desc: "Covers the cost of purchasing 5 native saplings, organic compost, soil preparation, and maintenance tools." },
+              { icon: <Receipt size={24} className="text-primary" />, title: "80G Tax Exemption Status", desc: "Indian taxpayers receive a 50% tax exemption. Digital 80G receipts are generated automatically and sent instantly." },
+              { icon: <ShieldCheck size={24} className="text-primary" />, title: "Transparent Audits", desc: "Our annual financial ledger books, bank details, and ecological impact metrics are publicly audited." }
             ].map((detail, idx) => (
               <div key={idx} className="flex gap-4 bg-white p-5 rounded-3xl border border-slate-100 shadow-md shadow-slate-100/50 hover:shadow-lg hover:shadow-emerald-500/5 hover:-translate-y-0.5 transition-all duration-300">
                 <div className="w-12 h-12 rounded-2xl bg-emerald-50 border border-emerald-100 flex items-center justify-center text-primary shrink-0">

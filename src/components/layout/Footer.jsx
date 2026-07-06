@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Leaf, Mail, Phone, MapPin, Send, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
 import Button from '../common/Button';
-import logoDhi from '../../assets/logo-dhi.png';
-import logoKaanaga from '../../assets/logo-kaanaga.png';
+import logoDhi from '../../assets/logo-dhi-official.png';
+import logoKaanaga from '../../assets/logo-kaanaga-official.png';
 
 const Footer = () => {
   const [email, setEmail] = useState('');
@@ -26,22 +26,23 @@ const Footer = () => {
         
         {/* About column */}
         <div className="space-y-5">
-          <Link to="/" className="flex items-center gap-3 select-none">
-            <div className="flex gap-2">
+          <Link to="/" className="flex flex-col gap-3 select-none">
+            <div className="flex items-center gap-3">
               <img 
                 src={logoDhi} 
                 alt="DHI Green Foundation Logo" 
-                className="w-10 h-10 object-contain rounded-lg border border-emerald-950 bg-white p-0.5"
+                className="h-10 w-auto object-contain rounded-lg bg-white/95 p-1.5 border border-emerald-900/50 shadow-sm"
               />
               <img 
                 src={logoKaanaga} 
                 alt="Kaanaga Kovai Logo" 
-                className="w-10 h-10 object-contain rounded-lg border border-emerald-950 bg-white p-0.5"
+                className="h-9 w-auto object-contain rounded-lg bg-white/95 p-1 border border-emerald-900/50 shadow-sm"
               />
             </div>
-            <div>
-              <span className="block font-display font-extrabold text-sm tracking-tight text-white leading-none">DHI GREEN FOUNDATION</span>
-              <span className="block font-display font-bold text-[9px] tracking-wider text-emerald-400 uppercase leading-none mt-1">Kaanaga Kovai Initiative</span>
+            <div className="text-[10px] text-slate-400 font-semibold space-y-0.5 uppercase tracking-wider font-display">
+              <p>Registered NGO | Section 8 Company</p>
+              <p className="text-emerald-400">CIN: U85300KA2021NPL148301</p>
+              <p>12A & 80G Tax Exempt Status</p>
             </div>
           </Link>
           <p className="text-sm text-slate-400 leading-relaxed">
@@ -50,10 +51,9 @@ const Footer = () => {
           {/* Social icons */}
           <div className="flex gap-3 pt-2">
             {[
-              { icon: <Facebook size={16} />, href: 'https://facebook.com' },
-              { icon: <Twitter size={16} />, href: 'https://twitter.com' },
-              { icon: <Instagram size={16} />, href: 'https://instagram.com' },
-              { icon: <Linkedin size={16} />, href: 'https://linkedin.com' }
+              { icon: <Facebook size={16} />, href: 'https://facebook.com/dhigreenfoundation' },
+              { icon: <Instagram size={16} />, href: 'https://instagram.com/dhigreenfoundation' },
+              { icon: <Linkedin size={16} />, href: 'https://linkedin.com/company/dhigreenfoundation' }
             ].map((social, idx) => (
               <a 
                 key={idx} 
@@ -86,15 +86,15 @@ const Footer = () => {
           <ul className="space-y-3.5 text-sm text-slate-400">
             <li className="flex items-start gap-2.5">
               <MapPin size={16} className="text-secondary shrink-0 mt-0.5" />
-              <span>45, Green Leaf Avenue, Environment Sector, Bangalore, India</span>
+              <span>SF No. 120, Kaanaga Kovai Road, Coimbatore, Tamil Nadu, India</span>
             </li>
             <li className="flex items-center gap-2.5">
               <Phone size={16} className="text-secondary shrink-0" />
-              <span>+91 80 4930 1827</span>
+              <span>+91 97903 66699</span>
             </li>
             <li className="flex items-center gap-2.5">
               <Mail size={16} className="text-secondary shrink-0" />
-              <span>contact@dhigreen.org</span>
+              <span>dhiya@dhigreenfoundation.org</span>
             </li>
           </ul>
         </div>

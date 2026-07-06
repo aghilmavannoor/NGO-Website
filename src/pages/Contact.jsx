@@ -44,15 +44,15 @@ const Contact = () => {
             <ul className="space-y-4 text-xs md:text-sm text-slate-300 pt-2 font-medium">
               <li className="flex items-start gap-3">
                 <MapPin size={18} className="text-emerald-400 shrink-0 mt-0.5" />
-                <span>45, Green Leaf Avenue, Environment Sector, Bangalore, India</span>
+                <span>SF No. 120, Kaanaga Kovai Road, Coimbatore, Tamil Nadu, India</span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone size={18} className="text-emerald-400 shrink-0" />
-                <span>+91 80 4930 1827</span>
+                <span>+91 97903 66699</span>
               </li>
               <li className="flex items-center gap-3">
                 <Mail size={18} className="text-emerald-400 shrink-0" />
-                <span>contact@dhigreen.org</span>
+                <span>dhiya@dhigreenfoundation.org</span>
               </li>
               <li className="flex items-center gap-3 border-t border-slate-800 pt-4 mt-2">
                 <Clock size={18} className="text-emerald-400 shrink-0" />
@@ -67,7 +67,7 @@ const Contact = () => {
             <div className="absolute inset-0 bg-slate-200 flex flex-col items-center justify-center text-slate-550 p-6 text-center">
               <MapPin size={32} className="text-primary mb-2 animate-bounce" />
               <span className="font-black text-xs font-display uppercase tracking-wide">DHI Green HQ Map</span>
-              <span className="text-[11px] text-slate-450 mt-1 font-semibold">45, Green Leaf Ave, Sector 4, Bangalore</span>
+              <span className="text-[11px] text-slate-450 mt-1 font-semibold">SF No. 120, Kaanaga Kovai Road, Coimbatore</span>
             </div>
           </div>
         </div>

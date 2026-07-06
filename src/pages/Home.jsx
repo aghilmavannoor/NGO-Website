@@ -9,7 +9,8 @@ import ProgramCard from '../components/common/ProgramCard';
 import PartnerSlider from '../components/common/PartnerSlider';
 import projectService from '../services/projectService';
 import { programsData } from '../data/mockData';
-import logoKaanaga from '../assets/logo-kaanaga.png';
+import logoKaanaga from '../assets/logo-kaanaga-official.png';
+import logoDhi from '../assets/logo-dhi-official.png';
 
 const Home = () => {
   const [featuredProjects, setFeaturedProjects] = useState([]);
@@ -96,18 +97,25 @@ const Home = () => {
           {/* Joint Initiative Branding Badge inside Hero */}
           <motion.div
             initial={{ opacity: 0 }}
-            animate={{ opacity: 0.8 }}
+            animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.45 }}
-            className="flex items-center justify-center gap-3 bg-white/5 border border-white/10 rounded-2xl p-4 max-w-md mx-auto backdrop-blur-sm"
+            className="flex items-center justify-center gap-4 bg-white/10 border border-white/20 rounded-3xl p-4 max-w-lg mx-auto backdrop-blur-md shadow-2xl"
           >
-            <img 
-              src={logoKaanaga} 
-              alt="Kaanaga Kovai Logo" 
-              className="w-12 h-12 object-contain bg-white rounded-xl p-1 shadow-md"
-            />
-            <div className="text-left">
-              <span className="block text-[10px] uppercase tracking-widest text-slate-400 font-bold">Collaborative Program</span>
-              <span className="block text-sm font-display font-bold text-white">Kaanaga Kovai Initiative</span>
+            <div className="flex gap-2.5">
+              <img 
+                src={logoDhi} 
+                alt="DHI Green Foundation Logo" 
+                className="h-10 w-auto object-contain bg-white rounded-xl p-1 shadow-md"
+              />
+              <img 
+                src={logoKaanaga} 
+                alt="Kaanaga Kovai Logo" 
+                className="h-10 w-auto object-contain bg-white rounded-xl p-1 shadow-md"
+              />
+            </div>
+            <div className="text-left border-l border-white/15 pl-4">
+              <span className="block text-[9px] uppercase tracking-widest text-emerald-300 font-black font-display">Culture with Agriculture</span>
+              <span className="block text-xs font-display font-bold text-white uppercase mt-0.5">DHI Green Foundation & Kaanaga Kovai</span>
             </div>
           </motion.div>
 

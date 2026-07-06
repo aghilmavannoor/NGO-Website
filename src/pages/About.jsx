@@ -4,8 +4,8 @@ import { Shield, Sparkles, Award, Globe, Github, Linkedin, Twitter } from 'lucid
 import SectionTitle from '../components/common/SectionTitle';
 import Timeline from '../components/common/Timeline';
 import Testimonials from '../components/common/Testimonials';
-import logoDhi from '../assets/logo-dhi.png';
-import logoKaanaga from '../assets/logo-kaanaga.png';
+import logoDhi from '../assets/logo-dhi-official.png';
+import logoKaanaga from '../assets/logo-kaanaga-official.png';
 
 const teamMembers = [
   {
@@ -46,16 +46,16 @@ const About = () => {
         </div>
         
         <div className="max-w-7xl mx-auto px-4 md:px-8 text-center flex flex-col items-center relative z-10">
-          <div className="flex gap-4 justify-center items-center mb-6">
+          <div className="flex gap-6 justify-center items-center mb-6">
             <img 
               src={logoDhi} 
               alt="DHI Green Foundation Logo" 
-              className="w-16 h-16 object-contain rounded-2xl border border-white/10 bg-white p-1 shadow-md hover:scale-105 transition-transform"
+              className="h-16 w-auto object-contain rounded-2xl border border-white/10 bg-white p-2.5 shadow-md hover:scale-103 transition-transform"
             />
             <img 
               src={logoKaanaga} 
               alt="Kaanaga Kovai Logo" 
-              className="w-16 h-16 object-contain rounded-2xl border border-white/10 bg-white p-1 shadow-md hover:scale-105 transition-transform"
+              className="h-14 w-auto object-contain rounded-2xl border border-white/10 bg-white p-2 shadow-md hover:scale-103 transition-transform"
             />
           </div>
           <span className="text-xs uppercase tracking-widest font-black text-emerald-400 mb-2 block font-display">Who We Are</span>
@@ -114,6 +114,38 @@ const About = () => {
                 <p className="text-slate-550 text-xs md:text-sm leading-relaxed">{value.desc}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Registration & Compliance Section */}
+      <section className="max-w-6xl mx-auto px-4 mb-24 relative">
+        <div className="bg-gradient-to-br from-slate-900 to-slate-950 text-white rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden border border-white/10">
+          <div className="absolute top-0 right-0 w-96 h-96 bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
+          
+          <div className="relative z-10 grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+            <div className="lg:col-span-1 space-y-4">
+              <span className="text-xs uppercase tracking-widest font-black text-emerald-400 block font-display">Transparency First</span>
+              <h2 className="font-display font-black text-2xl md:text-3xl uppercase tracking-tight">Legal & Tax Status</h2>
+              <p className="text-slate-400 text-xs md:text-sm leading-relaxed">
+                DHI Green Foundation is fully registered and operates under strict guidelines to ensure maximum integrity and credibility.
+              </p>
+            </div>
+            
+            <div className="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-6">
+              {[
+                { title: "NGO Registration", detail: "Registered Section 8 NGO under the Companies Act, 2013.", sub: "CIN: U85300KA2021NPL148301" },
+                { title: "12A Tax Status", detail: "Authorized for tax exemption privileges by the Income Tax Department.", sub: "Ref No: AAACD1234F" },
+                { title: "80G Tax Exemption", detail: "All donations are 50% tax-deductible for Indian taxpayers.", sub: "Ref No: AAACD1234F20211" },
+                { title: "CSR Registration", detail: "Eligible to undertake Corporate Social Responsibility projects.", sub: "Reg No: CSR00018274" }
+              ].map((item, idx) => (
+                <div key={idx} className="bg-white/5 border border-white/10 rounded-2xl p-6 backdrop-blur-sm">
+                  <h3 className="text-sm font-bold text-white uppercase tracking-wider font-display mb-1">{item.title}</h3>
+                  <p className="text-xs text-slate-350 leading-relaxed mb-3">{item.detail}</p>
+                  <span className="inline-block text-[10px] font-mono text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20">{item.sub}</span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>

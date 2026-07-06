@@ -4,14 +4,14 @@ import { Heart, ShieldCheck, CheckCircle } from 'lucide-react';
 import Button from './Button';
 
 const DonationCard = () => {
-  const [amount, setAmount] = useState('50');
+  const [amount, setAmount] = useState('1000');
   const [customAmount, setCustomAmount] = useState('');
   const [frequency, setFrequency] = useState('one-time');
   const [paymentMethod, setPaymentMethod] = useState('upi');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
 
-  const presetAmounts = ['10', '25', '50', '100', '250'];
+  const presetAmounts = ['250', '500', '1000', '2500', '5000'];
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -76,7 +76,7 @@ const DonationCard = () => {
 
               {/* Amount Selection */}
               <div>
-                <label className="block text-[10px] font-black text-slate-400 mb-2.5 uppercase tracking-wider">Select Amount (USD)</label>
+                <label className="block text-[10px] font-black text-slate-400 mb-2.5 uppercase tracking-wider">Select Amount (INR)</label>
                 <div className="grid grid-cols-5 gap-2 mb-3">
                   {presetAmounts.map((preset) => (
                     <button
@@ -92,7 +92,7 @@ const DonationCard = () => {
                           : 'border-slate-200 bg-white text-slate-700 hover:border-slate-350 hover:bg-slate-50'
                       }`}
                     >
-                      ${preset}
+                      ₹{preset}
                     </button>
                   ))}
                 </div>
@@ -116,12 +116,12 @@ const DonationCard = () => {
                     animate={{ opacity: 1, height: "auto" }}
                     className="relative"
                   >
-                    <span className="absolute left-4 top-3.5 text-slate-400 font-bold text-sm">$</span>
+                    <span className="absolute left-4 top-3.5 text-slate-400 font-bold text-sm">₹</span>
                     <input
                       type="number"
                       placeholder="Enter custom amount"
                       required
-                      min="5"
+                      min="50"
                       value={customAmount}
                       onChange={(e) => setCustomAmount(e.target.value)}
                       className="w-full pl-9 pr-4 py-3 border border-slate-200 rounded-2xl text-sm focus:outline-none focus:border-primary focus:ring-2 focus:ring-emerald-500/10 font-medium"
@@ -169,7 +169,7 @@ const DonationCard = () => {
                 className="w-full justify-center py-3.5 rounded-2xl shadow-lg shadow-primary/10 hover:scale-[1.01] transition-transform"
                 disabled={isSubmitting || (amount === 'custom' && !customAmount)}
               >
-                {isSubmitting ? 'Processing...' : `Donate $${finalAmount || '0'} Now`}
+                {isSubmitting ? 'Processing...' : `Donate ₹${finalAmount || '0'} Now`}
               </Button>
             </motion.form>
           ) : (
@@ -184,14 +184,14 @@ const DonationCard = () => {
               </div>
               <h4 className="font-display font-black text-2xl text-slate-800 uppercase tracking-wide">Thank You!</h4>
               <p className="text-slate-500 text-sm md:text-base leading-relaxed max-w-sm mx-auto font-medium">
-                Your donation of <span className="font-bold text-slate-800">${finalAmount}</span> has been processed successfully. We've emailed your tax invoice and receipt.
+                Your donation of <span className="font-bold text-slate-800">₹{finalAmount}</span> has been processed successfully. We've emailed your tax invoice and receipt.
               </p>
               <Button 
                 variant="outline" 
                 onClick={() => {
                   setIsSuccess(false);
                   setCustomAmount('');
-                  setAmount('50');
+                  setAmount('1000');
                 }}
                 className="mt-6 rounded-2xl shadow-sm hover:bg-emerald-50 hover:text-primary border-slate-200"
               >
