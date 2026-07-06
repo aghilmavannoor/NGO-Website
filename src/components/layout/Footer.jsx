@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { Leaf, Mail, Phone, MapPin, Send, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react';
 import Button from '../common/Button';
 import logoDhi from '../../assets/logo-dhi-official.png';
-import logoKaanaga from '../../assets/logo-kaanaga-official.png';
 
 const Footer = () => {
   const [email, setEmail] = useState('');
@@ -32,11 +31,6 @@ const Footer = () => {
                 src={logoDhi} 
                 alt="DHI Green Foundation Logo" 
                 className="h-10 w-auto object-contain rounded-lg bg-white/95 p-1.5 border border-emerald-900/50 shadow-sm"
-              />
-              <img 
-                src={logoKaanaga} 
-                alt="Kaanaga Kovai Logo" 
-                className="h-9 w-auto object-contain rounded-lg bg-white/95 p-1 border border-emerald-900/50 shadow-sm"
               />
             </div>
             <div className="text-[10px] text-slate-400 font-semibold space-y-0.5 uppercase tracking-wider font-display">

@@ -5,7 +5,6 @@ import SectionTitle from '../components/common/SectionTitle';
 import Timeline from '../components/common/Timeline';
 import Testimonials from '../components/common/Testimonials';
 import logoDhi from '../assets/logo-dhi-official.png';
-import logoKaanaga from '../assets/logo-kaanaga-official.png';
 
 const teamMembers = [
   {
@@ -46,22 +45,17 @@ const About = () => {
         </div>
         
         <div className="max-w-7xl mx-auto px-4 md:px-8 text-center flex flex-col items-center relative z-10">
-          <div className="flex gap-6 justify-center items-center mb-6">
+          <div className="flex justify-center items-center mb-6">
             <img 
               src={logoDhi} 
               alt="DHI Green Foundation Logo" 
               className="h-16 w-auto object-contain rounded-2xl border border-white/10 bg-white p-2.5 shadow-md hover:scale-103 transition-transform"
             />
-            <img 
-              src={logoKaanaga} 
-              alt="Kaanaga Kovai Logo" 
-              className="h-14 w-auto object-contain rounded-2xl border border-white/10 bg-white p-2 shadow-md hover:scale-103 transition-transform"
-            />
           </div>
           <span className="text-xs uppercase tracking-widest font-black text-emerald-400 mb-2 block font-display">Who We Are</span>
           <h1 className="font-display font-black text-4xl md:text-6xl uppercase tracking-tight">DHI Green Foundation</h1>
           <p className="text-slate-350 text-sm md:text-base max-w-2xl mx-auto mt-4 leading-relaxed font-medium">
-            Discover our history, values, team, and the milestones driving the Kaanaga Kovai ecological initiative.
+            Discover our history, values, team, and the milestones driving our ecological initiatives.
           </p>
         </div>
       </section>
@@ -74,7 +68,7 @@ const About = () => {
             We bridge the gap between ecological research and hands-on conservation.
           </h2>
           <p className="text-slate-600 text-sm md:text-base leading-relaxed font-medium">
-            Founded in 2021, Kaanaga Kovai (an initiative of DHI Green Foundation) started with a simple belief: environmental protection cannot be solved in laboratories alone. It requires empowering community members, farmers, and urban youths with scientific resources and tools to restore their immediate habitats.
+            Founded in 2021, DHI Green Foundation started with a simple belief: environmental protection cannot be solved in laboratories alone. It requires empowering community members, farmers, and urban youths with scientific resources and tools to restore their immediate habitats.
           </p>
           <p className="text-slate-650 text-sm leading-relaxed">
             By planting native tree corridors, clearing plastics from riparian basins, and deploying off-grid solar kits, we provide actionable avenues for climate mitigation.

@@ -9,7 +9,6 @@ import ProgramCard from '../components/common/ProgramCard';
 import PartnerSlider from '../components/common/PartnerSlider';
 import projectService from '../services/projectService';
 import { programsData } from '../data/mockData';
-import logoKaanaga from '../assets/logo-kaanaga-official.png';
 import logoDhi from '../assets/logo-dhi-official.png';
 
 const Home = () => {
@@ -94,28 +93,23 @@ const Home = () => {
             We empower local communities to combat climate change, plant biodiverse forests, and restore clean waterways. Join us in cultivating a sustainable planet.
           </motion.p>
 
-          {/* Joint Initiative Branding Badge inside Hero */}
+          {/* Branding Badge inside Hero */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.45 }}
-            className="flex items-center justify-center gap-4 bg-white/10 border border-white/20 rounded-3xl p-4 max-w-lg mx-auto backdrop-blur-md shadow-2xl"
+            className="flex items-center justify-center gap-4 bg-white/10 border border-white/20 rounded-3xl p-4 max-w-sm mx-auto backdrop-blur-md shadow-2xl"
           >
-            <div className="flex gap-2.5">
+            <div className="flex">
               <img 
                 src={logoDhi} 
                 alt="DHI Green Foundation Logo" 
                 className="h-10 w-auto object-contain bg-white rounded-xl p-1 shadow-md"
               />
-              <img 
-                src={logoKaanaga} 
-                alt="Kaanaga Kovai Logo" 
-                className="h-10 w-auto object-contain bg-white rounded-xl p-1 shadow-md"
-              />
             </div>
             <div className="text-left border-l border-white/15 pl-4">
               <span className="block text-[9px] uppercase tracking-widest text-emerald-300 font-black font-display">Culture with Agriculture</span>
-              <span className="block text-xs font-display font-bold text-white uppercase mt-0.5">DHI Green Foundation & Kaanaga Kovai</span>
+              <span className="block text-xs font-display font-bold text-white uppercase mt-0.5">DHI Green Foundation</span>
             </div>
           </motion.div>
 
