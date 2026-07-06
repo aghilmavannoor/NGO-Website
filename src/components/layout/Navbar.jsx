@@ -39,33 +39,35 @@ const Navbar = () => {
   ];
 
   const activeStyle = ({ isActive }) => 
-    `text-sm font-bold transition-colors font-display ${
-      isActive ? 'text-primary' : 'text-slate-600 hover:text-primary'
+    `text-[15px] font-extrabold tracking-wide transition-colors font-display ${
+      isActive ? 'text-primary' : 'text-slate-800 hover:text-primary'
     }`;
 
   const mobileActiveStyle = ({ isActive }) => 
     `block text-base font-bold py-2 font-display ${
-      isActive ? 'text-primary border-l-4 border-primary pl-3' : 'text-slate-600 hover:text-primary pl-4'
+      isActive ? 'text-primary border-l-4 border-primary pl-3' : 'text-slate-700 hover:text-primary pl-4'
     }`;
 
   return (
-    <header 
-      className={`fixed top-0 left-0 w-full z-40 transition-all duration-300 ${
-        isScrolled ? 'bg-white/95 backdrop-blur-md shadow-sm border-b border-slate-100 py-3' : 'bg-transparent py-5'
-      }`}
-    >
-      <div className="max-w-7xl mx-auto px-4 md:px-8 flex items-center justify-between">
+    <header className="fixed top-0 left-0 w-full z-45 px-4 md:px-8 py-4 transition-all duration-300">
+      <div 
+        className={`max-w-7xl mx-auto rounded-2xl md:rounded-full px-6 py-3 flex items-center justify-between transition-all duration-300 ${
+          isScrolled 
+            ? 'bg-white/95 backdrop-blur-md shadow-lg border border-slate-100/80' 
+            : 'bg-white/90 backdrop-blur-lg shadow-md border border-white/20'
+        }`}
+      >
         {/* Branding Logo */}
         <Link to="/" className="flex items-center select-none group">
           <img 
             src={logoDhi} 
             alt="DHI Green Foundation Logo" 
-            className="h-10 md:h-12 w-auto object-contain rounded-xl bg-white/95 border border-emerald-100 p-1.5 group-hover:scale-102 transition-transform shadow-sm"
+            className="h-12 md:h-[58px] w-auto object-contain rounded-xl bg-white border border-emerald-100/50 p-1 group-hover:scale-102 transition-transform shadow-sm"
           />
         </Link>
 
         {/* Desktop Navigation Link list */}
-        <nav className="hidden lg:flex items-center gap-5">
+        <nav className="hidden lg:flex items-center gap-6">
           {navLinks.map((link) => (
             <NavLink key={link.name} to={link.path} className={activeStyle}>
               {link.name}
@@ -76,7 +78,7 @@ const Navbar = () => {
         {/* CTA Actions & Emblem */}
         <div className="hidden lg:flex items-center gap-4">
           <Link to="/volunteer">
-            <Button variant="ghost" size="sm">Volunteer</Button>
+            <Button variant="ghost" size="sm" className="text-slate-700 hover:text-primary hover:bg-slate-100/50">Volunteer</Button>
           </Link>
           <Link to="/donate">
             <Button variant="primary" size="sm">Donate Now</Button>
@@ -86,7 +88,7 @@ const Navbar = () => {
         {/* Mobile Toggle Trigger */}
         <button 
           onClick={() => setIsOpen(!isOpen)}
-          className="lg:hidden text-slate-600 hover:text-primary p-2 focus:outline-none"
+          className="lg:hidden text-slate-700 hover:text-primary p-2 focus:outline-none"
           aria-label="Toggle menu"
         >
           {isOpen ? <X size={24} /> : <Menu size={24} />}
@@ -101,7 +103,7 @@ const Navbar = () => {
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.2 }}
-            className="lg:hidden bg-white border-b border-slate-100 shadow-lg overflow-hidden"
+            className="lg:hidden bg-white/95 backdrop-blur-lg border border-slate-100 shadow-lg rounded-2xl mt-2 overflow-hidden"
           >
             <div className="px-6 py-5 space-y-3">
               {navLinks.map((link) => (
