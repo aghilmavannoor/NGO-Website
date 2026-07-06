@@ -8,6 +8,8 @@ import ProjectCard from '../components/common/ProjectCard';
 import PartnerSlider from '../components/common/PartnerSlider';
 import projectService from '../services/projectService';
 import logoDhi from '../assets/logo-dhi-official.png';
+import homeHeroBg from '../assets/home-hero-bg.png';
+import aboutPlanting from '../assets/about-planting.jpg';
 
 const Home = () => {
   const [featuredProjects, setFeaturedProjects] = useState([]);
@@ -47,11 +49,11 @@ const Home = () => {
         {/* Environmental Canopy Background Image with Dark Soft Gradients */}
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1920&q=80" 
-            alt="Forest Canopy background" 
-            className="w-full h-full object-cover opacity-35"
+            src={homeHeroBg} 
+            alt="Children and teacher planting crops" 
+            className="w-full h-full object-cover opacity-60"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/70 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/75 to-transparent"></div>
           
           {/* Ambient Organic Light blobs */}
           <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-emerald-500/10 rounded-full blur-3xl pointer-events-none -translate-x-1/2 -translate-y-1/2"></div>
@@ -201,14 +203,14 @@ const Home = () => {
               
               <div className="relative h-[480px] rounded-3xl overflow-hidden shadow-xl bg-slate-100 border border-slate-100 group">
                 <img 
-                  src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=800&q=80" 
-                  alt="Tree planting community drive" 
+                  src={aboutPlanting} 
+                  alt="Agriculture Education Drive" 
                   className="w-full h-full object-cover group-hover:scale-103 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent"></div>
                 <div className="absolute bottom-6 left-6 text-white">
                   <span className="text-[10px] uppercase font-bold tracking-wider text-emerald-400">On-ground Action</span>
-                  <h4 className="font-display font-extrabold text-lg mt-1">Village Plantation Drive</h4>
+                  <h4 className="font-display font-extrabold text-lg mt-1">Agriculture Education Drive</h4>
                 </div>
               </div>
             </motion.div>
