@@ -4,7 +4,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Leaf } from 'lucide-react';
 import Button from '../common/Button';
 import logoDhi from '../../assets/logo-dhi-official.png';
-import logoKaanaga from '../../assets/logo-kaanaga-official.png';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -84,18 +83,6 @@ const Navbar = () => {
           <Link to="/donate">
             <Button variant="primary" size="sm">Donate Now</Button>
           </Link>
-          
-          <div className="flex items-center gap-2 border-l border-slate-200 pl-4 h-10">
-            <img 
-              src={logoKaanaga} 
-              alt="Kaanaga Kovai Logo" 
-              className="h-9 w-auto object-contain rounded-lg border border-emerald-100 bg-white/95 p-1 shadow-sm"
-            />
-            <div className="flex flex-col">
-              <span className="text-[9px] font-black text-slate-800 font-display leading-none uppercase">Kaanaga Kovai</span>
-              <span className="text-[7px] font-bold text-slate-400 font-sans leading-none mt-0.5 uppercase tracking-wider">Initiative</span>
-            </div>
-          </div>
         </div>
 
         {/* Mobile Toggle Trigger */}
@@ -132,18 +119,6 @@ const Navbar = () => {
                 <Link to="/donate" className="w-full">
                   <Button variant="primary" size="md" className="w-full justify-center">Donate Now</Button>
                 </Link>
-                
-                {/* Secondary Logo in Mobile Drawer */}
-                <div className="flex items-center justify-center gap-2 pt-2 border-t border-slate-100 mt-2">
-                  <img 
-                    src={logoKaanaga} 
-                    alt="Kaanaga Kovai Logo" 
-                    className="w-8 h-8 object-contain rounded-lg border border-emerald-100 bg-white p-0.5"
-                  />
-                  <span className="text-xs font-bold text-slate-500 font-display uppercase tracking-wider">
-                    Kaanaga Kovai Initiative
-                  </span>
-                </div>
               </div>
             </div>
           </motion.div>
