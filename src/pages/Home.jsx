@@ -45,30 +45,32 @@ const Home = () => {
   return (
     <div className="overflow-hidden font-sans">
       {/* 1. HERO SECTION (100vh Presentation Slide) */}
-      <section className="relative min-h-screen flex items-center bg-[#0b2812] text-white overflow-hidden pt-24 pb-16 px-4">
-        {/* Environmental Canopy Background Image with Custom Mockup Photo */}
+      {/* 1. HERO SECTION (100vh Presentation Slide) */}
+      <section className="relative min-h-screen flex items-center justify-center bg-slate-950 text-white overflow-hidden pt-20 pb-16 px-4">
+        {/* Environmental Canopy Background Image with Dark Soft Gradients */}
         <div className="absolute inset-0 z-0">
           <img 
             src={homeHeroBg} 
-            alt="Children and teacher planting crops" 
-            className="w-full h-full object-cover opacity-95 object-center lg:object-right animate-fade-in"
+            alt="People planting a sapling" 
+            className="w-full h-full object-cover opacity-90 animate-fade-in"
           />
-          {/* Responsive gradients: vertical on mobile, horizontal on desktop */}
-          <div className="absolute inset-0 bg-gradient-to-b from-[#0b2812]/85 via-[#0b2812]/50 to-[#0b2812]/90 lg:bg-gradient-to-r lg:from-[#0b2812]/95 lg:via-[#0b2812]/60 lg:to-transparent z-10"></div>
+          {/* Softer gradient in the center to keep people's faces extremely bright and clear */}
+          <div className="absolute inset-0 bg-gradient-to-b from-slate-950/70 via-slate-950/25 to-slate-950/90"></div>
           
           {/* Ambient Organic Light blobs */}
           <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-emerald-500/10 rounded-full blur-3xl pointer-events-none -translate-x-1/2 -translate-y-1/2"></div>
+          <div className="absolute bottom-1/4 right-1/4 w-[600px] h-[600px] bg-emerald-500/5 rounded-full blur-3xl pointer-events-none translate-x-1/2 translate-y-1/2"></div>
         </div>
 
         {/* Hero Content */}
-        <div className="max-w-7xl mx-auto relative z-20 space-y-8 w-full px-4 lg:px-8 text-left flex flex-col items-start">
+        <div className="max-w-7xl mx-auto text-center relative z-10 space-y-8 w-full px-4">
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-emerald-300 text-xs font-bold uppercase tracking-widest backdrop-blur-sm shadow-sm"
+            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-950/40 border border-white/10 text-emerald-400 text-xs font-bold uppercase tracking-widest backdrop-blur-sm shadow-md"
           >
-            <Leaf size={16} className="fill-emerald-300/20 text-emerald-300" />
+            <Leaf size={16} className="fill-emerald-400/20 text-emerald-400" />
             <span>Preserving Ecosystems Since 2021</span>
           </motion.div>
 
@@ -76,10 +78,10 @@ const Home = () => {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.15 }}
-            className="font-display font-black text-3xl sm:text-5xl md:text-6xl leading-none tracking-tight uppercase text-white max-w-2xl"
+            className="font-display font-black text-3xl sm:text-5xl md:text-6xl leading-none tracking-tight uppercase drop-shadow-[0_4px_12px_rgba(0,0,0,0.85)]"
           >
             Protecting Nature, <br />
-            <span className="text-emerald-400">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary via-emerald-400 to-accent">
               Restoring Ecosystems
             </span>
           </motion.h1>
@@ -88,7 +90,7 @@ const Home = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="text-slate-200/90 text-sm sm:text-lg max-w-xl font-medium leading-relaxed"
+            className="text-slate-100 text-sm sm:text-lg max-w-2xl mx-auto font-medium leading-relaxed drop-shadow-[0_2px_8px_rgba(0,0,0,0.85)]"
           >
             We empower local communities to combat climate change, plant biodiverse forests, and restore clean waterways. Join us in cultivating a sustainable planet.
           </motion.p>
@@ -98,13 +100,13 @@ const Home = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.45 }}
-            className="flex items-center gap-4 bg-white/10 border border-white/15 rounded-3xl p-4 w-full max-w-sm backdrop-blur-md shadow-lg"
+            className="flex items-center justify-center gap-4 bg-slate-950/40 border border-white/20 rounded-3xl p-4 max-w-sm mx-auto backdrop-blur-md shadow-2xl"
           >
             <div className="flex">
               <img 
                 src={logoDhi} 
                 alt="DHI Green Foundation Logo" 
-                className="h-10 w-auto object-contain bg-white rounded-xl p-1 shadow-sm"
+                className="h-10 w-auto object-contain bg-white rounded-xl p-1 shadow-md"
               />
             </div>
             <div className="text-left border-l border-white/15 pl-4">
@@ -117,15 +119,15 @@ const Home = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
-            className="flex flex-wrap gap-5 pt-4"
+            className="flex flex-wrap justify-center gap-5 pt-4"
           >
             <Link to="/donate">
-              <Button variant="primary" size="lg" className="gap-2 bg-[#15803d] hover:bg-[#166534] border-transparent text-white shadow-lg shadow-emerald-900/35 hover:scale-105 transition-transform duration-300">
-                Donate Now <Heart size={18} className="fill-white text-white" />
+              <Button variant="accent" size="lg" className="gap-2 shadow-lg shadow-accent/20 hover:scale-105 transition-transform duration-300">
+                Donate Now <Heart size={18} className="fill-slate-900 text-slate-900" />
               </Button>
             </Link>
             <Link to="/volunteer">
-              <Button variant="outline" size="lg" className="border-transparent bg-white text-[#15803d] hover:bg-slate-100 hover:scale-105 transition-transform duration-300 shadow-md">
+              <Button variant="outline" size="lg" className="border-white/25 bg-white/5 text-white hover:bg-white/10 hover:border-white/40 hover:scale-105 transition-transform duration-300">
                 Join as Volunteer
               </Button>
             </Link>
