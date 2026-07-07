@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { Leaf, ArrowRight, Heart, Users, Compass } from 'lucide-react';
+import { Leaf, ArrowRight, Heart, Users, Compass, Droplet } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Button from '../components/common/Button';
 import SectionTitle from '../components/common/SectionTitle';
@@ -45,92 +45,105 @@ const Home = () => {
   return (
     <div className="overflow-hidden font-sans">
       {/* 1. HERO SECTION (100vh Presentation Slide) */}
-      {/* 1. HERO SECTION (100vh Presentation Slide) */}
-      <section className="relative min-h-screen flex items-center justify-center bg-slate-950 text-white overflow-hidden pt-20 pb-16 px-4">
+      <section className="relative min-h-screen flex items-center bg-[#04140a] text-white overflow-hidden pt-32 pb-20 px-4 md:px-8">
         {/* Environmental Canopy Background Image with Dark Soft Gradients */}
         <div className="absolute inset-0 z-0">
           <img 
             src={homeHeroBg} 
             alt="People planting a sapling" 
-            className="w-full h-full object-cover opacity-90 animate-fade-in"
+            className="w-full h-full object-cover opacity-95 object-center lg:object-right animate-fade-in"
           />
-          {/* Softer gradient in the center to keep people's faces extremely bright and clear */}
-          <div className="absolute inset-0 bg-gradient-to-b from-slate-950/70 via-slate-950/25 to-slate-950/90"></div>
-          
-          {/* Ambient Organic Light blobs */}
-          <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-emerald-500/10 rounded-full blur-3xl pointer-events-none -translate-x-1/2 -translate-y-1/2"></div>
-          <div className="absolute bottom-1/4 right-1/4 w-[600px] h-[600px] bg-emerald-500/5 rounded-full blur-3xl pointer-events-none translate-x-1/2 translate-y-1/2"></div>
+          {/* Dark-green vignette overlay: very dark on the left/bottom, fading into light/transparent on the right */}
+          <div className="absolute inset-0 bg-gradient-to-b from-[#04140a]/90 via-[#04140a]/50 to-[#04140a]/95 lg:bg-gradient-to-r lg:from-[#04140a]/95 lg:via-[#04140a]/65 lg:to-transparent z-10"></div>
         </div>
 
         {/* Hero Content */}
-        <div className="max-w-7xl mx-auto text-center relative z-10 space-y-8 w-full px-4">
+        <div className="max-w-7xl mx-auto relative z-20 space-y-8 w-full text-left flex flex-col items-start px-4 lg:px-0">
+          {/* Leaf Badge */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6 }}
-            className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-950/40 border border-white/10 text-emerald-400 text-xs font-bold uppercase tracking-widest backdrop-blur-sm shadow-md"
+            className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-white text-xs font-bold uppercase tracking-widest backdrop-blur-sm shadow-md"
           >
-            <Leaf size={16} className="fill-emerald-400/20 text-emerald-400" />
-            <span>Preserving Ecosystems Since 2021</span>
+            <Leaf size={14} className="fill-emerald-500 text-emerald-500" />
+            <span>Preserving <span className="text-emerald-400">Nature</span>, Enriching <span className="text-emerald-400">Lives</span></span>
           </motion.div>
 
+          {/* Title */}
           <motion.h1
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.15 }}
-            className="font-display font-black text-3xl sm:text-5xl md:text-6xl leading-none tracking-tight uppercase drop-shadow-[0_4px_12px_rgba(0,0,0,0.85)]"
+            className="font-display font-black text-4xl sm:text-5xl md:text-6xl lg:text-[68px] leading-tight tracking-tight uppercase text-white max-w-3xl drop-shadow-md"
           >
-            Protecting Nature, <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-secondary via-emerald-400 to-accent">
-              Restoring Ecosystems
-            </span>
+            Together, We Can <br />
+            Build a <span className="text-emerald-400">Greener <br className="hidden md:inline" /> Tomorrow</span>
           </motion.h1>
 
+          {/* Paragraph */}
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="text-slate-100 text-sm sm:text-lg max-w-2xl mx-auto font-medium leading-relaxed drop-shadow-[0_2px_8px_rgba(0,0,0,0.85)]"
+            className="text-slate-300 text-sm sm:text-lg max-w-xl font-medium leading-relaxed drop-shadow-sm"
           >
-            We empower local communities to combat climate change, plant biodiverse forests, and restore clean waterways. Join us in cultivating a sustainable planet.
+            We empower communities through environmental <span className="text-emerald-400 font-bold">conservation</span>, tree plantation, and <span className="text-emerald-400 font-bold">sustainable</span> development for a better tomorrow.
           </motion.p>
 
-          {/* Branding Badge inside Hero */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.8, delay: 0.45 }}
-            className="flex items-center justify-center gap-4 bg-slate-950/40 border border-white/20 rounded-3xl p-4 max-w-sm mx-auto backdrop-blur-md shadow-2xl"
-          >
-            <div className="flex">
-              <img 
-                src={logoDhi} 
-                alt="DHI Green Foundation Logo" 
-                className="h-10 w-auto object-contain bg-white rounded-xl p-1 shadow-md"
-              />
-            </div>
-            <div className="text-left border-l border-white/15 pl-4">
-              <span className="block text-[9px] uppercase tracking-widest text-emerald-300 font-black font-display">Culture with Agriculture</span>
-              <span className="block text-xs font-display font-bold text-white uppercase mt-0.5">DHI Green Foundation</span>
-            </div>
-          </motion.div>
-
+          {/* Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
-            className="flex flex-wrap justify-center gap-5 pt-4"
+            className="flex flex-wrap gap-5 pt-2"
           >
-            <Link to="/donate">
-              <Button variant="accent" size="lg" className="gap-2 shadow-lg shadow-accent/20 hover:scale-105 transition-transform duration-300">
-                Donate Now <Heart size={18} className="fill-slate-900 text-slate-900" />
+            <Link to="/projects">
+              <Button variant="primary" size="lg" className="bg-[#22c55e] hover:bg-emerald-600 border-transparent text-white rounded-full font-bold px-8 py-3.5 flex items-center gap-2 transition-transform hover:scale-105 duration-300 shadow-lg shadow-emerald-950/20">
+                <Leaf size={18} /> Explore Our Projects
               </Button>
             </Link>
             <Link to="/volunteer">
-              <Button variant="outline" size="lg" className="border-white/25 bg-white/5 text-white hover:bg-white/10 hover:border-white/40 hover:scale-105 transition-transform duration-300">
-                Join as Volunteer
+              <Button variant="outline" size="lg" className="border-white/20 bg-white/5 hover:bg-white/10 text-white rounded-full font-bold px-8 py-3.5 flex items-center gap-2 transition-transform hover:scale-105 duration-300">
+                <Users size={18} /> Join as Volunteer
               </Button>
             </Link>
+          </motion.div>
+
+          {/* Features list row */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+            className="grid grid-cols-1 sm:grid-cols-3 gap-8 pt-8 mt-4 border-t border-white/15 w-full max-w-4xl"
+          >
+            <div className="flex items-center gap-4">
+              <div className="w-12 h-12 rounded-full bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 shrink-0">
+                <Leaf size={22} className="fill-emerald-500/10" />
+              </div>
+              <div>
+                <h4 className="font-extrabold text-white text-sm font-display tracking-wide">Plant Trees</h4>
+                <p className="text-slate-400 text-xs mt-0.5 leading-relaxed">Create a greener planet</p>
+              </div>
+            </div>
+            <div className="flex items-center gap-4">
+              <div className="w-12 h-12 rounded-full bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 shrink-0">
+                <Droplet size={22} className="fill-emerald-500/10" />
+              </div>
+              <div>
+                <h4 className="font-extrabold text-white text-sm font-display tracking-wide">Save Water</h4>
+                <p className="text-slate-400 text-xs mt-0.5 leading-relaxed">Protect every drop</p>
+              </div>
+            </div>
+            <div className="flex items-center gap-4">
+              <div className="w-12 h-12 rounded-full bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 shrink-0">
+                <Users size={22} className="fill-emerald-500/10" />
+              </div>
+              <div>
+                <h4 className="font-extrabold text-white text-sm font-display tracking-wide">Empower Communities</h4>
+                <p className="text-slate-400 text-xs mt-0.5 leading-relaxed">Together for a better tomorrow</p>
+              </div>
+            </div>
           </motion.div>
         </div>
       </section>
