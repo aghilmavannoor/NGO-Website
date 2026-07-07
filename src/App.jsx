@@ -24,30 +24,39 @@ const ScrollToTop = () => {
   return null;
 };
 
+const AppContent = () => {
+  const location = useLocation();
+  const isHomePage = location.pathname === '/';
+
+  return (
+    <div className="flex flex-col min-h-screen">
+      {!isHomePage && <Navbar />}
+      <main className="flex-grow">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/mission-vision" element={<MissionVision />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/programs" element={<Programs />} />
+          <Route path="/gallery" element={<Gallery />} />
+          <Route path="/impact" element={<Impact />} />
+          <Route path="/volunteer" element={<Volunteer />} />
+          <Route path="/donate" element={<Donate />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </main>
+      {!isHomePage && <Footer />}
+    </div>
+  );
+};
+
 function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
-      <div className="flex flex-col min-h-screen">
-        <Navbar />
-        <main className="flex-grow">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/mission-vision" element={<MissionVision />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/programs" element={<Programs />} />
-            <Route path="/gallery" element={<Gallery />} />
-            <Route path="/impact" element={<Impact />} />
-            <Route path="/volunteer" element={<Volunteer />} />
-            <Route path="/donate" element={<Donate />} />
-            <Route path="/blog" element={<Blog />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </main>
-        <Footer />
-      </div>
+      <AppContent />
     </BrowserRouter>
   );
 }
