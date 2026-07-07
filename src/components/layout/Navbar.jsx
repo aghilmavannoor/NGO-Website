@@ -3,7 +3,7 @@ import { NavLink, Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Heart } from 'lucide-react';
 import Button from '../common/Button';
-import logoDhi from '../../assets/logo-dhi-official.png';
+import logoDhi from '../../assets/logo-dhi-official-transparent.png';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -94,7 +94,7 @@ const Navbar = () => {
             Volunteer
           </Link>
           <Link to="/donate">
-            <Button variant="primary" size="sm" className="bg-[#22c55e] hover:bg-emerald-600 text-white border-transparent rounded-full px-5 py-2 flex items-center gap-1.5 font-bold shadow-md hover:scale-105 transition-transform">
+            <Button variant="primary" size="sm" className="bg-[#5BBE3A] hover:bg-[#4ca82f] text-white border-transparent rounded-full px-5 py-2 flex items-center gap-1.5 font-bold shadow-md hover:scale-105 transition-transform">
               <Heart size={15} className="fill-white text-white" /> Donate Now
             </Button>
           </Link>
@@ -132,7 +132,7 @@ const Navbar = () => {
                   <Button variant="outline" size="md" className="w-full justify-center border-white/20 text-white bg-white/5 rounded-full">Join as Volunteer</Button>
                 </Link>
                 <Link to="/donate" className="w-full">
-                  <Button variant="primary" size="md" className="w-full justify-center bg-[#22c55e] text-white rounded-full">Donate Now</Button>
+                  <Button variant="primary" size="md" className="w-full justify-center bg-[#5BBE3A] text-white rounded-full">Donate Now</Button>
                 </Link>
               </div>
             </div>

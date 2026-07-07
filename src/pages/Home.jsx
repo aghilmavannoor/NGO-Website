@@ -8,7 +8,7 @@ import ProjectCard from '../components/common/ProjectCard';
 import PartnerSlider from '../components/common/PartnerSlider';
 import projectService from '../services/projectService';
 import logoDhi from '../assets/logo-dhi-official.png';
-import homeHeroBg from '../assets/home-hero-bg.png';
+import homeHeroBg from '../assets/home-hero-bg.jpg';
 import aboutPlanting from '../assets/about-planting.jpg';
 
 const Home = () => {
@@ -45,16 +45,16 @@ const Home = () => {
   return (
     <div className="overflow-hidden font-sans">
       {/* 1. HERO SECTION (100vh Presentation Slide) */}
-      <section className="relative min-h-screen flex items-center bg-[#04140a] text-white overflow-hidden pt-32 pb-20 px-4 md:px-8">
+      <section className="relative min-h-screen flex items-center bg-[#0B2E1E] text-white overflow-hidden pt-32 pb-20 px-4 md:px-8">
         {/* Environmental Canopy Background Image with Dark Soft Gradients */}
         <div className="absolute inset-0 z-0">
           <img 
             src={homeHeroBg} 
             alt="People planting a sapling" 
-            className="w-full h-full object-cover opacity-95 object-center lg:object-right animate-fade-in"
+            className="w-full h-full object-cover object-center lg:object-right opacity-95 animate-fade-in"
           />
-          {/* Dark-green vignette overlay: very dark on the left/bottom, fading into light/transparent on the right */}
-          <div className="absolute inset-0 bg-gradient-to-b from-[#04140a]/90 via-[#04140a]/50 to-[#04140a]/95 lg:bg-gradient-to-r lg:from-[#04140a]/95 lg:via-[#04140a]/65 lg:to-transparent z-10"></div>
+          {/* Split composition: Deep emerald green (#0B2E1E) overlay on the left fading smoothly to transparent on the right */}
+          <div className="absolute inset-0 bg-gradient-to-b from-[#0B2E1E]/95 via-[#0B2E1E]/60 to-[#0B2E1E]/95 lg:bg-gradient-to-r lg:from-[#0B2E1E] lg:via-[#0B2E1E]/95 lg:to-transparent z-10"></div>
         </div>
 
         {/* Hero Content */}
@@ -66,8 +66,7 @@ const Home = () => {
             transition={{ duration: 0.6 }}
             className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 text-white text-xs font-bold uppercase tracking-widest backdrop-blur-sm shadow-md"
           >
-            <Leaf size={14} className="fill-emerald-500 text-emerald-500" />
-            <span>Preserving <span className="text-emerald-400">Nature</span>, Enriching <span className="text-emerald-400">Lives</span></span>
+            <span>🍃 PRESERVING <span className="text-[#5BBE3A]">NATURE</span>, ENRICHING <span className="text-[#5BBE3A]">LIVES</span></span>
           </motion.div>
 
           {/* Title */}
@@ -78,7 +77,7 @@ const Home = () => {
             className="font-display font-black text-4xl sm:text-5xl md:text-6xl lg:text-[68px] leading-tight tracking-tight text-white max-w-3xl drop-shadow-md"
           >
             Together, We Can <br />
-            Build a <span className="text-emerald-400">Greener <br className="hidden md:inline" /> Tomorrow</span>
+            Build a <span className="text-[#5BBE3A]">Greener <br className="hidden md:inline" /> Tomorrow</span>
           </motion.h1>
 
           {/* Paragraph */}
@@ -86,9 +85,9 @@ const Home = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="text-slate-300 text-sm sm:text-lg max-w-xl font-medium leading-relaxed drop-shadow-sm"
+            className="text-slate-350 text-sm sm:text-lg max-w-xl font-medium leading-relaxed drop-shadow-sm"
           >
-            We empower communities through environmental <span className="text-emerald-400 font-bold">conservation</span>, tree plantation, and <span className="text-emerald-400 font-bold">sustainable</span> development for a better tomorrow.
+            We empower communities through environmental <span className="text-[#5BBE3A] font-bold">conservation</span>, tree plantation, and <span className="text-[#5BBE3A] font-bold">sustainable</span> development for a better tomorrow.
           </motion.p>
 
           {/* Buttons */}
@@ -99,7 +98,7 @@ const Home = () => {
             className="flex flex-wrap gap-5 pt-2"
           >
             <Link to="/projects">
-              <Button variant="primary" size="lg" className="bg-[#22c55e] hover:bg-emerald-600 border-transparent text-white rounded-full font-bold px-8 py-3.5 flex items-center gap-2 transition-transform hover:scale-105 duration-300 shadow-lg shadow-emerald-950/20">
+              <Button variant="primary" size="lg" className="bg-[#5BBE3A] hover:bg-[#4ca82f] border-transparent text-white rounded-full font-bold px-8 py-3.5 flex items-center gap-2 transition-transform hover:scale-105 duration-300 shadow-lg shadow-emerald-950/20">
                 <Leaf size={18} /> Explore Our Projects
               </Button>
             </Link>
@@ -119,7 +118,7 @@ const Home = () => {
           >
             <div className="flex items-center gap-4">
               <div className="w-12 h-12 rounded-full bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 shrink-0">
-                <Leaf size={22} className="fill-emerald-500/10" />
+                <Leaf size={22} className="fill-[#5BBE3A]/10 text-[#5BBE3A]" />
               </div>
               <div>
                 <h4 className="font-extrabold text-white text-sm font-display tracking-wide">Plant Trees</h4>
@@ -128,7 +127,7 @@ const Home = () => {
             </div>
             <div className="flex items-center gap-4">
               <div className="w-12 h-12 rounded-full bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 shrink-0">
-                <Droplet size={22} className="fill-emerald-500/10" />
+                <Droplet size={22} className="fill-[#5BBE3A]/10 text-[#5BBE3A]" />
               </div>
               <div>
                 <h4 className="font-extrabold text-white text-sm font-display tracking-wide">Save Water</h4>
@@ -137,7 +136,7 @@ const Home = () => {
             </div>
             <div className="flex items-center gap-4">
               <div className="w-12 h-12 rounded-full bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 shrink-0">
-                <Users size={22} className="fill-emerald-500/10" />
+                <Users size={22} className="fill-[#5BBE3A]/10 text-[#5BBE3A]" />
               </div>
               <div>
                 <h4 className="font-extrabold text-white text-sm font-display tracking-wide">Empower Communities</h4>
@@ -147,9 +146,9 @@ const Home = () => {
           </motion.div>
         </div>
 
-        {/* Decorative Bottom-Left Foliage */}
+        {/* Decorative Bottom-Left Foliage (subtle blurred leaf silhouettes) */}
         <div className="absolute bottom-0 left-0 w-80 h-80 pointer-events-none opacity-25 z-10 select-none">
-          <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full text-emerald-500/30 fill-current">
+          <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full text-[#5BBE3A]/20 fill-current filter blur-[1px]">
             <path d="M10 190C60 160 110 110 130 50" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
             <path d="M130 50C140 40 150 42 152 48C150 58 140 60 130 50Z" />
             <path d="M110 80C125 70 135 72 137 78C132 88 120 90 110 80Z" />
