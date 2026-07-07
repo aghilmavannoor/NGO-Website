@@ -75,7 +75,7 @@ const Home = () => {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.15 }}
-            className="font-display font-black text-4xl sm:text-5xl md:text-6xl lg:text-[68px] leading-tight tracking-tight uppercase text-white max-w-3xl drop-shadow-md"
+            className="font-display font-black text-4xl sm:text-5xl md:text-6xl lg:text-[68px] leading-tight tracking-tight text-white max-w-3xl drop-shadow-md"
           >
             Together, We Can <br />
             Build a <span className="text-emerald-400">Greener <br className="hidden md:inline" /> Tomorrow</span>
@@ -145,6 +145,23 @@ const Home = () => {
               </div>
             </div>
           </motion.div>
+        </div>
+
+        {/* Decorative Bottom-Left Foliage */}
+        <div className="absolute bottom-0 left-0 w-80 h-80 pointer-events-none opacity-25 z-10 select-none">
+          <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-full text-emerald-500/30 fill-current">
+            <path d="M10 190C60 160 110 110 130 50" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+            <path d="M130 50C140 40 150 42 152 48C150 58 140 60 130 50Z" />
+            <path d="M110 80C125 70 135 72 137 78C132 88 120 90 110 80Z" />
+            <path d="M90 105C105 95 115 97 117 103C112 113 100 115 90 105Z" />
+            <path d="M70 130C85 120 95 122 97 128C92 138 80 140 70 130Z" />
+            <path d="M50 155C65 145 75 147 77 153C72 163 60 165 50 155Z" />
+            
+            <path d="M120 65C110 55 105 57 103 63C108 73 120 75 120 65Z" />
+            <path d="M100 90C90 80 85 82 83 88C88 98 100 100 100 90Z" />
+            <path d="M80 115C70 105 65 107 63 113C68 123 80 125 80 115Z" />
+            <path d="M60 140C50 130 45 132 43 138C48 148 60 150 60 140Z" />
+          </svg>
         </div>
       </section>
 
