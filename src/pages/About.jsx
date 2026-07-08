@@ -34,27 +34,20 @@ const About = () => {
   return (
     <div className="pt-24 pb-20 bg-gradient-to-b from-white via-emerald-50/15 to-white">
       {/* Header Banner */}
-      <section className="relative bg-slate-900 text-white py-20 mb-20 overflow-hidden">
-        <div className="absolute inset-0 z-0 opacity-20">
+      <section className="relative bg-[#0B2E1E] text-white py-24 mb-20 overflow-hidden">
+        <div className="absolute inset-0 z-0 opacity-15">
           <img 
             src="https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=1200&q=80" 
             alt="Forest banner" 
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0B2E1E] to-transparent"></div>
         </div>
         
-        <div className="max-w-7xl mx-auto px-4 md:px-8 text-center flex flex-col items-center relative z-10">
-          <div className="flex justify-center items-center mb-6">
-            <img 
-              src={logoDhi} 
-              alt="DHI Green Foundation Logo" 
-              className="h-16 w-auto object-contain rounded-2xl border border-white/10 bg-white p-2.5 shadow-md hover:scale-103 transition-transform"
-            />
-          </div>
+        <div className="max-w-7xl mx-auto px-6 md:px-8 text-left relative z-10 flex flex-col items-start">
           <span className="text-xs uppercase tracking-widest font-black text-emerald-400 mb-2 block font-display">Who We Are</span>
-          <h1 className="font-display font-black text-4xl md:text-6xl uppercase tracking-tight">DHI Green Foundation</h1>
-          <p className="text-slate-350 text-sm md:text-base max-w-2xl mx-auto mt-4 leading-relaxed font-medium">
+          <h1 className="font-display font-black text-4xl md:text-5xl uppercase tracking-tight text-white">DHI Green Foundation</h1>
+          <p className="text-slate-350 text-sm md:text-base max-w-2xl mt-4 leading-relaxed font-medium">
             Discover our history, values, team, and the milestones driving our ecological initiatives.
           </p>
         </div>

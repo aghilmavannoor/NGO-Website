@@ -15,20 +15,20 @@ const Impact = () => {
   return (
     <div className="pt-24 pb-20 bg-gradient-to-b from-white via-emerald-50/15 to-white">
       {/* Header Banner */}
-      <section className="relative bg-slate-900 text-white py-20 mb-20 overflow-hidden">
-        <div className="absolute inset-0 z-0 opacity-20">
+      <section className="relative bg-[#0B2E1E] text-white py-24 mb-20 overflow-hidden">
+        <div className="absolute inset-0 z-0 opacity-15">
           <img 
             src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80" 
             alt="Mountain backdrop" 
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-slate-900 to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0B2E1E] to-transparent"></div>
         </div>
         
-        <div className="max-w-7xl mx-auto px-4 md:px-8 text-center relative z-10">
+        <div className="max-w-7xl mx-auto px-6 md:px-8 text-left relative z-10 flex flex-col items-start">
           <span className="text-xs uppercase tracking-widest font-black text-emerald-400 mb-3 block font-display">Our Accountability</span>
-          <h1 className="font-display font-black text-4xl md:text-6xl uppercase tracking-tight">Impact & Success</h1>
-          <p className="text-slate-350 text-sm md:text-base max-w-xl mx-auto mt-4 leading-relaxed font-medium">
+          <h1 className="font-display font-black text-4xl md:text-5xl uppercase tracking-tight text-white">Impact & Success</h1>
+          <p className="text-slate-350 text-sm md:text-base max-w-xl mt-4 leading-relaxed font-medium">
             Review our quantified progress indicators, verified success stories, and annual audits.
           </p>
         </div>
