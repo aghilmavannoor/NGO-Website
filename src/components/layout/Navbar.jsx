@@ -52,7 +52,7 @@ const Navbar = () => {
           <img 
             src={logoDhi} 
             alt="DHI Green Foundation Logo" 
-            className="h-16 md:h-18 w-auto object-contain transition-transform"
+            className="h-20 md:h-24 lg:h-28 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
           />
         </Link>
 
