@@ -1,0 +1,187 @@
+Website Requirements Document
+DHI Green Foundation
+Prepared for: External Website Development Team
+Prepared by: [Rifa p], on behalf of DHI Green Foundation
+This document outlines the content, design, functional, and technical requirements for the
+organization's website, along with a clear division of responsibilities between the NGO and the
+external development team.
+
+1. Core Pages Required
+•
+•
+•
+•
+•
+•
+•
+•
+•
+
+Home
+About Us (history, mission, vision, team)
+Programs / Projects
+Impact / Results
+Gallery
+Blog / News (optional)
+Contact Us
+Donate
+Volunteer / Get Involved
+
+2. Trust & Credibility Elements
+•
+•
+•
+•
+•
+•
+
+NGO registration number and legal status
+12A / 80G / FCRA details (if applicable)
+Annual reports / financial transparency
+Board members / team with names and photos
+Testimonials and partner logos
+Verified physical address
+
+3. Functional Requirements
+• Secure, working Donate button (real payment gateway, not a demo)
+• Contact form and Volunteer form that deliver submissions to the NGO's email
+
+• Social media links
+• Newsletter signup (optional)
+• Search function (if content-heavy)
+
+4. Technical Requirements
+•
+•
+•
+•
+•
+•
+•
+
+Fully mobile responsive
+Fast loading speed (optimized / compressed images)
+SSL certificate (https)
+Easy content management system (editable without coding)
+Domain and hosting registered under the NGO's name
+Basic SEO setup (titles, meta descriptions)
+Analytics integration (Google Analytics or similar)
+
+5. Legal / Compliance
+•
+•
+•
+•
+
+Privacy Policy
+Terms & Conditions
+Cookie consent (if analytics / tracking used)
+Tax exemption disclosure (if donations are tax-deductible)
+
+6. Design Requirements
+•
+•
+•
+•
+
+One consistent logo and colour palette throughout
+Simple navigation (5–7 main menu items maximum)
+Real photographs only — no generic stock images in the final version
+Accessible design: readable fonts, sufficient colour contrast, alt text for images
+
+7. Handover Requirements
+• Domain, hosting, and CMS login credentials handed over to the NGO
+• Basic training / walkthrough video for content updates
+• Written agreement on post-launch support duration and cost of future changes
+
+8. Division of Responsibility
+Provided by the NGO
+
+Provided by Development Team
+
+All page text (mission, about, program descriptions,
+impact stories)
+
+Website layout, structure, and visual design
+
+Real photographs and videos of field work, team, and
+events
+
+Technical build, coding, and integrations (forms,
+donation gateway)
+
+Organization logo (high resolution)
+
+Temporary placeholder content only, until final
+NGO content is received
+
+NGO registration certificate and related legal
+documents
+
+Mobile optimization and performance tuning
+
+12A / 80G / FCRA certificates (if applicable)
+Testimonials and quotes
+Social media handles / links
+
+Provided by the NGO — Final Checklist
+DHI Green Foundation
+This page is to be filled and signed off by the NGO before final handover, confirming all required assets and
+documents have been shared with the development team.
+
+Item
+
+Provided (✓)
+
+Organization Logo (high resolution, .png/.svg)
+
+☐
+
+NGO Registration Certificate
+
+☐
+
+12A / 80G / FCRA Certificates (if applicable)
+
+☐
+
+Final Page Text Content (Home, About, Programs, Impact,
+Contact, etc.)
+
+☐
+
+Photos & Videos of Field Work / Events
+
+☐
+
+Team & Board Member Details (names, designations, photos)
+
+☐
+
+Testimonials / Partner Logos
+
+☐
+
+Social Media Links & Handles
+
+☐
+
+Bank / Payment Account Details for Donate Button
+
+☐
+
+Physical Address & Contact Details
+
+☐
+
+Prepared by (Signature): _______________________
+
+Date: ____________
+
+Approved by NGO Owner (Signature): _______________________
+
+Date: ____________
+
+Date
+
+
