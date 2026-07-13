@@ -1,59 +1,59 @@
 export const projectsData = [
   {
     id: 1,
-    title: "Project Green Canopy",
-    description: "A major afforestation project aiming to plant 100,000 native trees across degraded forest zones and semi-urban landscapes.",
-    fullDescription: "Project Green Canopy is DHI Green Foundation's flagship afforestation initiative. By partnering with local community boards, state forest departments, and corporate sponsors, we are restoring biodiversity to over 200 hectares of degraded lands. We plant only native species like Neem, Banyan, and Peepal to ensure ecological resilience and support local wildlife ecosystems.",
+    title: "HUDCO Colony Miyawaki Forest",
+    description: "Restoring an abandoned Peelamedu OSR garbage dump site into a self-sustaining green lung.",
+    fullDescription: "The HUDCO Colony project in Peelamedu is one of Dhi Green Foundation's key urban afforestation initiatives. Working in partnership with the Coimbatore City Municipal Corporation, our volunteers cleared a garbage dump site and planted 300 native tree saplings and 200 medicinal plants. The forest features high-density planting and drip irrigation to ensure high growth rates.",
     image: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=800&q=80",
-    location: "Karnataka, India",
-    startDate: "2024-03-01",
-    endDate: "2026-12-31",
-    status: "Active",
-    beneficiaries: "12,000+ Villagers",
-    progress: 68,
-    category: "Afforestation"
+    location: "Peelamedu, Coimbatore",
+    startDate: "2022-08-15",
+    endDate: "2024-08-15",
+    status: "Completed",
+    beneficiaries: "8,000+ Peelamedu Residents",
+    progress: 100,
+    category: "Urban Forestry"
   },
   {
     id: 2,
-    title: "Urban Eco-Gardens",
-    description: "Empowering urban communities to grow their own organic food and establish micro-ecosystems on concrete rooftops.",
-    fullDescription: "Urban Eco-Gardens addresses the issue of urban heat islands and food insecurity. We conduct workshops, provide low-cost starter kits, and design community rooftops to convert concrete wastes into thriving permaculture gardens. This project helps families reduce organic waste while producing fresh, pesticide-free vegetables.",
-    image: "https://images.unsplash.com/photo-1530595467537-0b5996c41f2d?auto=format&fit=crop&w=800&q=80",
-    location: "Bangalore Metro, India",
-    startDate: "2025-01-15",
-    endDate: "2025-10-30",
+    title: "CCMC 75 Miyawaki Sites",
+    description: "Developing and maintaining 75 Miyawaki micro-forests across Coimbatore city's OSR lands.",
+    fullDescription: "As part of the Coimbatore City Municipal Corporation's mega greening drive, Dhi Green Foundation was tasked with the development and two-year maintenance of 75 Miyawaki forests. This major campaign has successfully introduced over 40,000 native tree saplings and herbal species, helping combat urban heat island effects and restore indigenous biodiversity.",
+    image: "https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=800&q=80",
+    location: "Coimbatore City, Tamil Nadu",
+    startDate: "2022-08-01",
+    endDate: "2025-12-31",
     status: "Active",
-    beneficiaries: "3,500 Urban Families",
-    progress: 45,
-    category: "Urban Farming"
+    beneficiaries: "120,000+ Urban Residents",
+    progress: 85,
+    category: "Afforestation"
   },
   {
     id: 3,
-    title: "River Rejuvenation Campaign",
-    description: "Cleaning, desilting, and planting riparian buffers along the Arkavathi river basin to restore natural water flow and quality.",
-    fullDescription: "The Arkavathi river basin cleanup is a massive multi-stakeholder campaign. Our team of volunteers works alongside local municipalities to extract plastic waste, block agricultural runoff using bio-filters, and plant deep-rooting grasses along the river banks to prevent soil erosion and improve water quality.",
-    image: "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=800&q=80",
-    location: "Ramanagara District, India",
-    startDate: "2023-06-01",
-    endDate: "2024-06-30",
-    status: "Completed",
-    beneficiaries: "45,000+ Residents",
-    progress: 100,
-    category: "Water Conservation"
+    title: "Student Agricultural Education",
+    description: "Fostering environmental leadership through school gardening workshops and organic farming apprenticeships.",
+    fullDescription: "Our agricultural education campaign reaches local school children to build ecological awareness. Through hands-on workshops, students learn seedball making, compost preparation, and native tree care. We also offer internship opportunities at the Dhi Greens farm, empowering the next generation of eco-conscious leaders.",
+    image: "https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?auto=format&fit=crop&w=800&q=80",
+    location: "Coimbatore Schools",
+    startDate: "2023-01-10",
+    endDate: "2026-06-30",
+    status: "Active",
+    beneficiaries: "5,000+ Students",
+    progress: 90,
+    category: "Education"
   },
   {
     id: 4,
-    title: "Solar Light for Villages",
-    description: "Replacing kerosene lamps with clean, reliable solar micro-grids and lanterns in off-grid tribal villages.",
-    fullDescription: "Solar Light for Villages brings modern, eco-friendly energy solutions to remote tribal hamlets. We construct solar micro-grids, install streetlights, and distribute portable solar lanterns. This initiative reduces carbon footprints while improving safety, evening education, and small-scale night-time commerce.",
-    image: "https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=800&q=80",
-    location: "Western Ghats, India",
-    startDate: "2024-09-01",
-    endDate: "2025-06-30",
+    title: "Women Farmers Organic Network",
+    description: "Mentoring smallholder women farmers in sustainable, chemical-free organic farming practices.",
+    fullDescription: "Led by Dr. Dhivya Vasudevan, this network supports rural women farmers across the Coimbatore district. We conduct workshops on soil health, drip irrigation efficiency, and bio-pesticide production to help families transition away from chemicals and increase their crop yield stability.",
+    image: "https://images.unsplash.com/photo-1595974482597-4b8da8879bc5?auto=format&fit=crop&w=800&q=80",
+    location: "Coimbatore District",
+    startDate: "2021-11-15",
+    endDate: "2025-12-31",
     status: "Active",
-    beneficiaries: "1,200 Tribal households",
-    progress: 80,
-    category: "Clean Energy"
+    beneficiaries: "800+ Women Farmers",
+    progress: 75,
+    category: "Organic Farming"
   }
 ];
 
@@ -218,10 +218,10 @@ export const testimonialsData = [
 ];
 
 export const impactStatsData = [
-  { id: 1, value: 124000, label: "Trees Planted", suffix: "+", target: 124000 },
-  { id: 2, value: 65000, label: "Lives Impacted", suffix: "+", target: 65000 },
-  { id: 3, value: 45, label: "Kilometers of River Cleaned", suffix: " km", target: 45 },
-  { id: 4, value: 180, label: "Eco-Leaders Trained", suffix: "+", target: 180 }
+  { id: 1, value: 40000, label: "Native Trees Planted", suffix: "+", target: 40000 },
+  { id: 2, value: 75, label: "Miyawaki Forests Created", suffix: "+", target: 75 },
+  { id: 3, value: 35, label: "Schools Reached", suffix: "+", target: 35 },
+  { id: 4, value: 1500, label: "Volunteers Mobilized", suffix: "+", target: 1500 }
 ];
 
 export const partnersData = [

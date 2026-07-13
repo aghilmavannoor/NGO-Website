@@ -4,28 +4,27 @@ import { Shield, Sparkles, Award, Globe, Github, Linkedin, Twitter } from 'lucid
 import SectionTitle from '../components/common/SectionTitle';
 import Timeline from '../components/common/Timeline';
 import Testimonials from '../components/common/Testimonials';
-import logoDhi from '../assets/logo-dhi-official.png';
 
 const teamMembers = [
   {
-    name: 'Siddharth Rao',
-    designation: 'Founder & Executive Director',
-    bio: 'Former climate researcher with 12+ years of ecosystem rehabilitation experience in South Asia.',
-    image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=150&h=150&q=80',
+    name: 'Dr. Dhivya Vasudevan',
+    designation: 'Founder & Director',
+    bio: 'Agricultural entrepreneur and ecological advocate leading urban afforestation and Miyawaki forest initiatives in Coimbatore.',
+    image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=150&h=150&q=80',
     social: { linkedin: '#', twitter: '#' }
   },
   {
-    name: 'Dr. Arundhati Sen',
-    designation: 'Lead Conservation Scientist',
-    bio: 'Ph.D. in Restoration Ecology. Author of multiple papers on native forest regeneration.',
-    image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=150&h=150&q=80',
+    name: 'Susila Vasudevan',
+    designation: 'Director & Co-Founder',
+    bio: 'Dedicated to community mobilization, agricultural education, and sustainable development campaigns.',
+    image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=150&h=150&q=80',
     social: { linkedin: '#', twitter: '#' }
   },
   {
     name: 'Anjali Sharma',
     designation: 'Volunteer Coordinator',
-    bio: 'Social work graduate dedicated to mobilizing young minds for local cleanup campaigns.',
-    image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=150&h=150&q=80',
+    bio: 'Social work graduate dedicated to organizing student-led seedball making and school plantation drives.',
+    image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&h=150&q=80',
     social: { linkedin: '#', twitter: '#' }
   }
 ];
@@ -121,7 +120,7 @@ const About = () => {
             
             <div className="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-6">
               {[
-                { title: "NGO Registration", detail: "Registered Section 8 NGO under the Companies Act, 2013.", sub: "CIN: U85300KA2021NPL148301" },
+                { title: "NGO Registration", detail: "Registered Section 8 NGO under the Companies Act, 2013.", sub: "CIN: U85300TZ2021NPL037456" },
                 { title: "12A Tax Status", detail: "Authorized for tax exemption privileges by the Income Tax Department.", sub: "Ref No: AAACD1234F" },
                 { title: "80G Tax Exemption", detail: "All donations are 50% tax-deductible for Indian taxpayers.", sub: "Ref No: AAACD1234F20211" },
                 { title: "CSR Registration", detail: "Eligible to undertake Corporate Social Responsibility projects.", sub: "Reg No: CSR00018274" }

@@ -39,7 +39,7 @@ const Donate = () => {
             </p>
             <div className="mt-4 p-4 rounded-2xl bg-emerald-50/50 border border-emerald-100/50 text-xs text-slate-700 leading-relaxed font-medium">
               <strong className="text-primary uppercase tracking-wide font-display block mb-1">Official Compliance Details</strong>
-              DHI Green Foundation is registered under Section 8 of the Companies Act, 2013 (CIN: U85300KA2021NPL148301). All contributions are eligible for a 50% tax exemption under Section 80G (Ref: AAACD1234F20211).
+              DHI Green Foundation is registered under Section 8 of the Companies Act, 2013 (CIN: U85300TZ2021NPL037456). All contributions are eligible for a 50% tax exemption under Section 80G (Ref: AAACD1234F20211).
             </div>
           </div>
 

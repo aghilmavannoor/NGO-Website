@@ -35,7 +35,7 @@ const Footer = () => {
             </div>
             <div className="text-[10px] text-slate-400 font-semibold space-y-0.5 uppercase tracking-wider font-display">
               <p>Registered NGO | Section 8 Company</p>
-              <p className="text-emerald-400">CIN: U85300KA2021NPL148301</p>
+              <p className="text-emerald-400">CIN: U85300TZ2021NPL037456</p>
               <p>12A & 80G Tax Exempt Status</p>
             </div>
           </Link>
@@ -80,7 +80,7 @@ const Footer = () => {
           <ul className="space-y-3.5 text-sm text-slate-400">
             <li className="flex items-start gap-2.5">
               <MapPin size={16} className="text-secondary shrink-0 mt-0.5" />
-              <span>SF No. 120, Kaanaga Kovai Road, Coimbatore, Tamil Nadu, India</span>
+              <span>No. 359/1, S. Palayam, A-203, Duraisamy Layout, Peelamedu, Coimbatore, Tamil Nadu - 641004</span>
             </li>
             <li className="flex items-center gap-2.5">
               <Phone size={16} className="text-secondary shrink-0" />
@@ -88,7 +88,7 @@ const Footer = () => {
             </li>
             <li className="flex items-center gap-2.5">
               <Mail size={16} className="text-secondary shrink-0" />
-              <span>dhiya@dhigreenfoundation.org</span>
+              <span>agbdhivya@gmail.com</span>
             </li>
           </ul>
         </div>

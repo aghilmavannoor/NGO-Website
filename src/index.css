@@ -1,19 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,300..900;1,300..900&family=Inter:wght@300..900&display=swap');
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #166534;
-  --color-secondary: #22c55e;
-  --color-accent: #fbbf24;
-  --font-sans: 'Inter', sans-serif;
-  --font-display: 'Outfit', sans-serif;
+  --color-primary: #6BA539;
+  --color-dark-green: #0B2E17;
+  --color-bg-base: #F7F8F5;
+  --color-accent-green: #9DDC5A;
+  --color-text-dark: #1E1E1E;
+  
+  --color-deep-forest: #0B2E17;
+  --color-warm-white: #F7F8F5;
+  --color-light-beige: #F4F2EC;
+  --color-accent-gold: #D6B55A;
+  
+  --font-serif: 'Playfair Display', serif;
+  --font-poppins: 'Poppins', sans-serif;
+  --font-inter: 'Inter', sans-serif;
+  
+  --font-sans: 'Poppins', sans-serif;
+  --font-display: 'Playfair Display', serif;
 }
 
 @layer base {
   body {
     font-family: var(--font-sans);
+    background-color: var(--color-bg-base);
+    color: var(--color-text-dark);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
   }
 }
 
 .font-display {
   font-family: var(--font-display);
+}
+
+.font-inter {
+  font-family: var(--font-inter);
 }

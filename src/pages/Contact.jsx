@@ -44,7 +44,7 @@ const Contact = () => {
             <ul className="space-y-4 text-xs md:text-sm text-slate-300 pt-2 font-medium">
               <li className="flex items-start gap-3">
                 <MapPin size={18} className="text-emerald-400 shrink-0 mt-0.5" />
-                <span>SF No. 120, Kaanaga Kovai Road, Coimbatore, Tamil Nadu, India</span>
+                <span>No. 359/1, S. Palayam, A-203, Duraisamy Layout, Peelamedu, Coimbatore, Tamil Nadu - 641004</span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone size={18} className="text-emerald-400 shrink-0" />
@@ -52,7 +52,7 @@ const Contact = () => {
               </li>
               <li className="flex items-center gap-3">
                 <Mail size={18} className="text-emerald-400 shrink-0" />
-                <span>dhiya@dhigreenfoundation.org</span>
+                <span>agbdhivya@gmail.com</span>
               </li>
               <li className="flex items-center gap-3 border-t border-slate-800 pt-4 mt-2">
                 <Clock size={18} className="text-emerald-400 shrink-0" />
@@ -60,14 +60,14 @@ const Contact = () => {
               </li>
             </ul>
           </div>
-
+ 
           {/* Google Maps placeholder */}
           <div className="bg-slate-100 border border-slate-200 rounded-3xl h-60 overflow-hidden relative shadow-sm">
             {/* Simulated Map */}
             <div className="absolute inset-0 bg-slate-200 flex flex-col items-center justify-center text-slate-550 p-6 text-center">
               <MapPin size={32} className="text-primary mb-2 animate-bounce" />
               <span className="font-black text-xs font-display uppercase tracking-wide">DHI Green HQ Map</span>
-              <span className="text-[11px] text-slate-450 mt-1 font-semibold">SF No. 120, Kaanaga Kovai Road, Coimbatore</span>
+              <span className="text-[11px] text-slate-450 mt-1 font-semibold">Peelamedu, Coimbatore</span>
             </div>
           </div>
         </div>

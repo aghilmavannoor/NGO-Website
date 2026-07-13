@@ -6,7 +6,6 @@ import Home from './pages/Home';
 import About from './pages/About';
 import MissionVision from './pages/MissionVision';
 import Projects from './pages/Projects';
-import Programs from './pages/Programs';
 import Gallery from './pages/Gallery';
 import Impact from './pages/Impact';
 import Volunteer from './pages/Volunteer';
@@ -30,14 +29,13 @@ const AppContent = () => {
 
   return (
     <div className="flex flex-col min-h-screen">
-      {!isHomePage && <Navbar />}
+      <Navbar />
       <main className="flex-grow">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/mission-vision" element={<MissionVision />} />
           <Route path="/projects" element={<Projects />} />
-          <Route path="/programs" element={<Programs />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/impact" element={<Impact />} />
           <Route path="/volunteer" element={<Volunteer />} />

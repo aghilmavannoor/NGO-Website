@@ -58,16 +58,16 @@ const Impact = () => {
         <div className="space-y-16 mt-12">
           {[
             {
-              title: "From Barren Land to Forest Canopy",
-              desc: "In 2022, DHI Green partnered with the community of Ramanagara. The hill zone suffered from extreme desertification and soil erosion. Over 24 months, 150 volunteers and villagers planted 12,000 native saplings. Today, soil runoff has decreased by 40%, local water aquifers have recharged, and over 14 bird species have returned to nesting.",
+              title: "Peelamedu HUDCO Colony Miyawaki Forest",
+              desc: "In August 2022, we partnered with the Coimbatore City Municipal Corporation (CCMC) to convert a former OSR garbage dump site in HUDCO Colony, Peelamedu into a green oasis. Our team, along with local residents and student volunteers, cleared the landfill area, prepared the soil using organic compost, and planted 300 native tree saplings alongside 200 medicinal and herbal plants. Today, it stands as a thriving micro-forest with fully active drip irrigation.",
               image: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=800&q=80",
-              milestone: "100% survival rate maintained on native plants."
+              milestone: "95%+ survival rate on native species in Peelamedu."
             },
             {
-              title: "The Arkavathi Riparian Zone Recovery",
-              desc: "Heavy industrial and urban plastics choked the flow of the local Arkavathi tributary. DHI Green mobilized the Sustainable Riparian cleanup. By setting up bio-barriers and arranging weekend student sorting tasks, we collected 15+ tons of plastic. Rippling grasses now protect the banks from future erosion, cleaning water downstream.",
-              image: "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=800&q=80",
-              milestone: "Arkavathi waterway flowing clear of massive surface plastic wastes."
+              title: "Coimbatore 75 Miyawaki Forests Initiative",
+              desc: "As a key environmental partner of CCMC, Dhi Green Foundation undertook the establishment and two-year maintenance of 75 Miyawaki micro-forests on Open Space Reservation (OSR) lands. Over 40,000 native saplings and indigenous shrubs have been planted, successfully countering the urban heat island effect, replenishing groundwater, and restoring local bird and butterfly populations to urban Coimbatore.",
+              image: "https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?auto=format&fit=crop&w=800&q=80",
+              milestone: "75 urban micro-forest sites established and nurtured."
             }
           ].map((story, idx) => (
             <div key={idx} className={`flex flex-col lg:flex-row items-center gap-12 ${
