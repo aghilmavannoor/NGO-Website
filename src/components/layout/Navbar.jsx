@@ -3,7 +3,7 @@ import { NavLink, Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, Heart } from 'lucide-react';
 import Button from '../common/Button';
-import logoDhi from '../../assets/logo-dhi-official-transparent-v2.png';
+import logoDhi from '../../assets/logo-dhi-official.png';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
